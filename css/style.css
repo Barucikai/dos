@@ -1,0 +1,294 @@
+@font-face {
+  font-family: Light-Italic;
+  src: url(../Font/Sugo-Pro-Classic-Light-Italic-trial.ttf);
+}
+* {
+  font-family: "Source Code Pro", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  transition: 0.8s ease all;
+}
+body.dark {
+  background: black;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.banner .box {
+  position: relative;
+  height: 100vh;
+}
+
+/*
+color total mente blanco sin negro
+.banner{
+    .box:last-child{
+            background: $ColTex;
+    }
+
+}
+*/
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body.dark header a {
+  color: #ffffff;
+}
+body.dark header a:hover {
+  color: #2a8ae1;
+}
+
+.logo {
+  width: 100px;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+header ul li a {
+  font-family: Light-Italic;
+  text-decoration: none;
+  font-weight: 500;
+  color: #550197;
+  letter-spacing: 1px;
+}
+
+header ul li a:hover {
+  color: #e0da03;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.content h2 {
+  font-family: Light-Italic;
+  font-size: 4em;
+  color: #550197;
+}
+body.dark .content h2 {
+  color: #ffffff;
+}
+body.dark .content h1 {
+  color: #ffffff;
+}
+
+.content h2 p {
+  font-size: 1.1em;
+  color: #e0da03;
+  line-height: 1.8em;
+}
+body.dark .content p {
+  color: #ffffff;
+}
+
+.btn {
+  font-family: Light-Italic;
+  display: inline-block;
+  font-size: 1.1em;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  border: 2px solid #550197;
+  padding: 10px 30px;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+body.dark .btn {
+  color: #ffffff;
+}
+
+.btn:hover {
+  background: #550197;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+body.dark .btn {
+  color: #ffffff;
+}
+
+.sci {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 30px;
+  right: 60px;
+}
+
+.sci h3 {
+  font-family: Light-Italic;
+  font-weight: 500;
+  color: #550197;
+  letter-spacing: 1px;
+}
+body.dark .sci h3 {
+  color: #ffffff;
+}
+
+.sci li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.sci li .imge {
+  max-width: 30px;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images .imgBx {
+  position: relative;
+  width: 50%;
+  background: #550197;
+}
+
+.images .imgBx:nth-child(2) {
+  background: #2a8ae1;
+}
+
+.images .imgBx:nth-child(3) {
+  width: 100%;
+  background: #f82cb2;
+}
+
+.images .imgBx .imge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.switch {
+  background: #6b6a6a;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active {
+  background: #e0da03;
+  color: #000;
+}
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+.imgls {
+  height: 15px;
+  position: relative;
+}
+
+.footer {
+  background: #fff;
+  padding: 3rem;
+  width: 100%;
+}
+body.dark .footer {
+  background: #000;
+}
+
+.inner-footer {
+  width: 80%;
+  margin: 0 auto;
+  color: black;
+}
+body.dark .inner-footer {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 20px 40px;
+  }
+
+  .content {
+    position: 40px;
+  }
+
+  .banner .box .content {
+    height: 70vh;
+  }
+
+  .content .box .images {
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .content h2 {
+    font-size: 3em;
+  }
+
+  .images .imgBx {
+    width: 100%;
+    height: 34vh;
+  }
+  .images .imgBx .imge {
+    width: 100%;
+  }
+
+  header {
+    left: -39px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,380 @@
+//colores principales
+$ColGenFondo:#550197;
+$ColTex: #ffffff;
+$ColSecunicon: #2a8ae1;
+
+//Otos colores
+$Col_1:#e0da03;
+$Col_2:#ff7101;
+$Col_3:#f82cb2;
+$Col_4:#0c96df;
+//Fuente del h1 hasta h3
+@font-face {
+    font-family: Light-Italic;
+    src: url(../Font/Sugo-Pro-Classic-Light-Italic-trial.ttf);
+  }
+  $FunLogo: Light-Italic;
+  //Funte para texto y P
+  $fonTex: 'Source Code Pro', monospace;
+
+  //media de media - 991px - max-width
+  $mx991:991px;
+  $mx600:600px;
+  //Cuerpo de la pagina
+*{
+    font-family: $fonTex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//----------------------------------------color blanco y negro--------------------------------------------------
+
+body{
+    background: $ColTex;
+    transition: .8s ease all;
+
+    &.dark{
+        background: rgb(0, 0, 0);
+    }
+}
+.banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .box{
+        position: relative;
+        height: 100vh;
+    }
+}
+
+/*
+color total mente blanco sin negro
+.banner{
+    .box:last-child{
+            background: $ColTex;
+    }
+
+}
+*/
+
+//----------------------------------------color blanco y negro FIN--------------------------------------------------
+
+// Menu
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //----------------------------------------color blanco y negro FIN--------------------------------------------------
+    body.dark &{
+        a{
+            color: $ColTex;
+            &:hover{
+                color:$ColSecunicon;
+            }
+        }
+    }
+    //----------------------------------------color blanco y negro FIN--------------------------------------------------
+}
+.logo {
+    width: 100px;
+}
+header{
+    ul{
+        display: flex;
+    }
+}
+header{
+    ul{
+        li{
+            list-style: none;
+            margin-left: 30px;
+        }
+    }
+}
+header{
+    ul{
+        li{
+            a{
+                font-family: $FunLogo;
+                text-decoration: none;
+                font-weight: 500;
+                color: $ColGenFondo;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+header{
+    ul{
+        li{
+            a:hover{
+                color:$Col_1;
+            }
+        }
+    }
+}
+
+//primer DIV content
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+.content{
+    h2{
+        font-family: $FunLogo;
+        font-size: 4.0em;
+        color: $ColGenFondo;
+    }
+    //---------color blanco y negro-----------
+    body.dark &{
+        h2{
+            color: $ColTex;
+        }
+        h1{
+            color: $ColTex;
+        }
+
+    }
+    //---------color blanco y negro FIN-----------
+}
+.content{
+    h2{
+        p{
+            font-size: 1.1em;
+            color: $Col_1;
+            line-height: 1.8em;
+        }
+    }
+    //---------color blanco y negro-----------
+    body.dark &{
+        p{
+            color: $ColTex;
+        }
+
+    }
+    //---------color blanco y negro FIN-----------
+}
+.btn{
+    font-family: $FunLogo;
+    display: inline-block;
+    font-size: 1.1em;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    border: 2px solid $ColGenFondo;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    body.dark &{
+        color: $ColTex;
+   }
+}
+.btn:hover{
+    background: $ColGenFondo;
+    color: $ColTex;
+    letter-spacing: 1px;
+
+}
+.btn{
+//---------color blanco y negro-----------
+    body.dark &{
+         color: $ColTex;
+    }
+ //---------color blanco y negro FIN-----------
+}
+.sci{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 30px;
+    right: 60px;
+}
+.sci{
+    h3{
+        font-family: $FunLogo;
+        font-weight: 500;
+        color: $ColGenFondo;
+        letter-spacing: 1px;
+    }
+    //---------color blanco y negro-----------
+    body.dark &{
+        h3{
+            color: $ColTex;
+        }
+
+    }
+    //---------color blanco y negro FIN-----------
+}
+.sci {
+    li{
+        list-style: none;
+        margin-left: 20px;
+    }
+}
+.sci{
+    li{
+        .imge{
+            max-width: 30px;
+        }
+    }
+}
+//segunado DIV BOX IMAGES
+.images{
+    display: flex;
+    flex-wrap: wrap;
+}
+.images{
+    .imgBx{
+        position: relative;
+        width: 50%;
+        background: $ColGenFondo;
+    }
+}
+.images{
+    .imgBx:nth-child(2){
+        background: $ColSecunicon;
+    }
+}
+.images{
+    .imgBx:nth-child(3){
+        width: 100%;
+        background: $Col_3;
+    }
+}
+.images{
+    .imgBx{
+        .imge{
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+//----------------------------------------color blanco y negro--------------------------------------------------
+.switch{
+    background: rgb(107, 106, 106);
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+
+    &::after{
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #f1f1f1;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: 3s ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+    }
+
+    &.active{
+        background: $Col_1;
+        color: #000;
+        &::after{
+            right: 0;
+            left: unset;
+        }
+    }
+
+    span{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+    }
+}
+.imgls{
+    height: 15px;
+    position: relative;
+}
+.footer {
+	background:#fff;
+	padding:3rem;
+	width:100%;
+    body.dark &{
+        background: #000;
+    }
+}
+
+.inner-footer {
+	width:80%;
+	margin:0 auto;
+	color:rgb(0, 0, 0);
+    body.dark &{
+        color: #fff;
+
+    }
+}
+
+//----------------------------------------color blanco y negro FIN--------------------------------------------------
+
+@media(max-width:$mx991){
+     .banner{
+         grid-template-columns: 1fr;
+     }
+     header{
+         padding: 20px 40px;
+     }
+     .content{
+         position: 40px;
+     }
+     .banner{
+         .box{
+             .content{
+                 height: 70vh;
+             }
+         }
+     }
+     .content{
+         .box{
+             .images{
+                 height: auto;
+             }
+         }
+     }
+}
+@media (max-width:$mx600){
+    .content{
+        h2{
+            font-size: 3em;
+        }
+    }
+    .images{
+        .imgBx{
+            width: 100%;
+            height: 34vh;
+             .imge{
+                width: 100%;
+            }
+        }
+    }
+    header {
+        left: -39px;
+    }
+}
+//Resposive para moviles
+
+
